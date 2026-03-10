@@ -19,6 +19,13 @@ plt.style.use('seaborn-v0_8')
 sns.set_palette("husl")
 
 # Создание примерных данных (имитация реального датасета)
+data = {
+    'trip_id': range(1, 1001),
+    'route': ['А1', 'Б2', 'А1', 'В3', 'Б2', 'А1', 'Г4', 'В3', 'А1', 'Б2'] * 100,
+    'start_time': pd.date_range('2024-04-01 06:00', periods=1000, freq='15min'),
+    'duration_min': [15, 20, 18, 25, 22, 16, 30, 24, 17, 19] * 100,
+    'passenger_count': [1, 2, 1, 3, 1, 2, 1, 4, 1, 2] * 100
+}
 
 
 df = pd.DataFrame(data)
